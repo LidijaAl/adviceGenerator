@@ -1,0 +1,135 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+.main {
+    background-color: hsl(218, 23%, 16%);
+    position: relative;
+    height: 100vh;
+}
+
+.card {
+    width: 90%;
+    border-radius: 10px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-35%);
+    background-color: hsl(217, 19%, 24%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    font-family: 'Manrope', sans-serif;
+}
+
+.text {
+    margin-top: 8%;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+}
+
+#advice-number {
+    color: hsl(150, 100%, 66%);
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+#advice {
+    color: hsl(193, 38%, 86%);
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.divider {
+    margin-bottom: 15%;
+
+}
+
+#divider-desktop {
+    display: none;
+  
+}
+
+#dice {
+    background-color: hsl(150, 100%, 66%);
+    border-radius: 50px;
+    padding: 18px;
+    position: absolute;
+    top: 92%;
+    transition: 0.4s;
+
+}
+#dice:hover{
+    box-shadow: 0 0 15px 1px hsl(150, 100%, 66%);
+}
+#dice-image {
+    width: 27px;
+}
+
+/*animation*/
+
+.spin {
+    animation: spin 2s ease-in-out;
+
+}
+
+@keyframes spin {
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+/*media query*/
+
+@media (min-width: 690px) {
+
+    .card {
+        width: 65%;
+    }
+
+    .divider {
+        margin-bottom: 10%;
+    }
+
+    #divider-desktop {
+        display: block;
+    }
+
+    #divider-mobile {
+        display: none;
+    }
+
+    #dice {
+        padding: 18px;
+        position: absolute;
+        top: 92%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .card {
+        width: 45%;
+    }
+}
+
+
+@media (min-width: 1500px) {
+    .card {
+        width: 35%;
+    }
+}
+
+@media (min-width: 1800px) {
+    .card {
+        width: 40%;
+    }
+}
